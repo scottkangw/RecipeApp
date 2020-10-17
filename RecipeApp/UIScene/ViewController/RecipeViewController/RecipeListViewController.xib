@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecipeListViewController" customModule="RecipeApp" customModuleProvider="target">
+            <connections>
+                <outlet property="recipeTypePickerView" destination="JpP-iR-xe5" id="XrD-4u-SkV"/>
+                <outlet property="tableView" destination="Dje-nq-t4G" id="LI2-pe-M6B"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eFk-0S-3rb">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JpP-iR-xe5">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="164"/>
+                        </pickerView>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dje-nq-t4G">
+                            <rect key="frame" x="0.0" y="163.5" width="414" height="654.5"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </tableView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="JpP-iR-xe5" firstAttribute="height" secondItem="eFk-0S-3rb" secondAttribute="height" multiplier="0.2" id="xNc-8C-i74"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="eFk-0S-3rb" secondAttribute="trailing" id="01R-K2-mjA"/>
+                <constraint firstItem="eFk-0S-3rb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6b0-5j-Pba"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="eFk-0S-3rb" secondAttribute="bottom" id="7Gy-La-ma9"/>
+                <constraint firstItem="eFk-0S-3rb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="nGG-jq-23p"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="86"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<catalog>
+    <type id="0">
+        <title>side dish</title>
+    </type>
+    <type id="1">
+        <title>main course</title>
+    </type>
+    <type id="2">
+        <title>dessert</title>
+    </type>
+    <type id="3">
+        <title>appetizer</title>
+    </type>
+    <type id="4">
+        <title>salad</title>
+    </type>
+    <type id="5">
+        <title>bread</title>
+    </type>
+    <type id="6">
+        <title>breakfast</title>
+    </type>
+    <type id="7">
+        <title>soup</title>
+    </type>
+    <type id="8">
+        <title>beverage</title>
+    </type>
+    <type id="9">
+        <title>sauce</title>
+    </type>
+    <type id="10">
+        <title>marinade</title>
+    </type>
+    <type id="11">
+        <title>fingerfood</title>
+    </type>
+    <type id="12">
+        <title>snack</title>
+    </type>
+    <type id="13">
+        <title>drink</title>
+    </type>
+</catalog>
+

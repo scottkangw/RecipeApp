@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CookStep" representedClassName="CookStep" syncable="YES" codeGenerationType="class">
+        <attribute name="step" optional="YES" attributeType="String"/>
+        <relationship name="instruction" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Instruction" inverseName="steps" inverseEntity="Instruction"/>
+    </entity>
+    <entity name="Ingredient" representedClassName="Ingredient" syncable="YES" codeGenerationType="class">
+        <attribute name="ingredient" optional="YES" attributeType="String"/>
+        <attribute name="number" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="recipe" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Recipe" inverseName="ingredients" inverseEntity="Recipe"/>
+    </entity>
+    <entity name="Instruction" representedClassName="Instruction" syncable="YES" codeGenerationType="class">
+        <attribute name="instruction" optional="YES" attributeType="String"/>
+        <attribute name="step" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="recipe" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Recipe" inverseName="instructions" inverseEntity="Recipe"/>
+        <relationship name="steps" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CookStep" inverseName="instruction" inverseEntity="CookStep"/>
+    </entity>
+    <entity name="Recipe" representedClassName="Recipe" syncable="YES" codeGenerationType="class">
+        <attribute name="imageData" optional="YES" attributeType="Binary"/>
+        <attribute name="imageURL" optional="YES" attributeType="String"/>
+        <attribute name="sourceURL" optional="YES" attributeType="String"/>
+        <attribute name="time" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <relationship name="ingredients" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ingredient" inverseName="recipe" inverseEntity="Ingredient"/>
+        <relationship name="instructions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Instruction" inverseName="recipe" inverseEntity="Instruction"/>
+    </entity>
+    <elements>
+        <element name="CookStep" positionX="232.23828125" positionY="442.171875" width="128" height="28"/>
+        <element name="Ingredient" positionX="137.48828125" positionY="105.3984375" width="136.72265625" height="88"/>
+        <element name="Instruction" positionX="219.8203125" positionY="247.0703125" width="128" height="28"/>
+        <element name="Recipe" positionX="-150.23828125" positionY="133.2109375" width="128" height="163"/>
+    </elements>
+</model>
